@@ -1,0 +1,33 @@
+import processing.serial.*; // Importing the serial library to communicate with the arduino
+Serial myPort; // initializing a variable named myport for serial communication
+
+void setup () {
+  size(500, 500);
+  background(0, 0, 0);
+  myPort = new Serial(this, "COM7", 9600);
+  myPort.bufferUntil('\n');
+}
+
+void draw(){
+  if (key == 'c'){
+    myPort.write('c'); // sends value to serial monitor
+  }
+  if (key == 'd'){
+    myPort.write('d');
+  }
+  if (key == 'e'){
+    myPort.write('e');
+  }
+  if (key == 'f'){
+    myPort.write('f');
+  }
+  if (key == 'g'){
+    myPort.write('g');
+  }
+  if (key == 'a'){
+    myPort.write('a');
+  }
+  if (key == 'b'){
+    myPort.write('b');
+  }
+}
