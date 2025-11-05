@@ -1,0 +1,35 @@
+int buz = 13;
+
+void setup() {
+  pinMode(buz, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  if (Serial.available()) {
+    char key = Serial.read();
+    if (key == 'c') {
+      tone(buz, 261);
+
+    }
+    if (key == 'd') {
+      tone(buz, 293);
+    }
+    if (key == 'e') {
+      tone(buz, 329);
+    }
+    if (key == 'f') {
+      tone(buz, 349);
+    }
+    if (key == 'g') {
+      tone(buz, 392);
+    }
+    if (key == 'a') {
+      tone(buz, 440);
+    }
+    if (key == 'b') {
+      tone(buz, 493);
+    }
+    
+  }
+}
